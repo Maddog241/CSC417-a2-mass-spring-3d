@@ -119,8 +119,8 @@ int main(int argc, char **argv) {
     igl::edge_lengths(V,E,l0);
 
     //setup simulation 
-    init_state(q,qdot,V);
-    mass_matrix_particles(M, q, m);
+    init_state(q,qdot,V);  // set the initial position and velocities of vertices
+    mass_matrix_particles(M, q, m);  // fill the mass matrix
     
     //setup constraint matrix
     find_min_vertices(fixed_point_indices, V, 3);
